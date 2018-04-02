@@ -13,7 +13,7 @@ var searchItem = process.argv[3];
 
 //function that will gather latest tweets 
 function twitterSearch (){
-  fs.appendFile("random.txt", " 'Command: my-tweets' ", function (err) {
+  fs.appendFile("log.txt", "\n'Command: my-tweets'", function (err) {
     if (err) {
       console.log(err);
     }
@@ -34,7 +34,7 @@ function twitterSearch (){
 
 //function that will gather info of the song searched
 function spotifySearch () {
-  fs.appendFile("random.txt", " 'Command: spotify-this-song; Song searched: " + searchItem + "' ", function (err) {
+  fs.appendFile("log.txt", "\n'Command: spotify-this-song; Song searched: " + searchItem + "'", function (err) {
     if (err) {
       console.log(err);
     }
@@ -65,7 +65,7 @@ function spotifySearch () {
 
 //function that will gather info of the film searched
 function omdb(){
-  fs.appendFile("random.txt", " 'Command: movie-this; Film searched: " + searchItem + "' ", function (err) {
+  fs.appendFile("log.txt", "\n'Command: movie-this; Film searched: " + searchItem + "'", function (err) {
     if (err) {
       console.log(err);
     }
@@ -99,7 +99,7 @@ function omdb(){
 
 //function for do-what-it-says. It will read the random.txt file and split the array. it will take from this "I want it that way" as a song and run the spotify function and search this song.
 function doWhatItSays (){
-  fs.appendFile("random.txt", " 'Command: do-what-it-says' ", function (err) {
+  fs.appendFile("log.txt", "\n'Command: do-what-it-says'", function (err) {
     if (err) {
       console.log(err);
     }
