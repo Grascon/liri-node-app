@@ -1,1 +1,1 @@
-spotify-this-song,"I Want it That Way"
+spotify-this-song,"I Want it That Way"Command: my-tweets 'Command: movie-this; Film searched: the sandlot'  'Command: my-tweets' ; 'Command: spotify-this-song; Song searched: Eye of the Tiger' 

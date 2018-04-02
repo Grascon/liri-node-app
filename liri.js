@@ -13,6 +13,14 @@ var searchItem = process.argv[3];
 
 //function that will gather latest tweets 
 function twitterSearch (){
+  fs.appendFile("random.txt", " 'Command: my-tweets' ", function (err) {
+    if (err) {
+      console.log(err);
+    }
+    else {
+      console.log("Content Added!");
+    }
+  });
   var client = new Twitter(myKeys.twitter);
   var params = {screen_name: 'Grascons'};
   client.get('statuses/user_timeline', params, function(error, tweets, response) {
@@ -26,6 +34,14 @@ function twitterSearch (){
 
 //function that will gather info of the song searched
 function spotifySearch () {
+  fs.appendFile("random.txt", "; 'Command: spotify-this-song; Song searched: " + searchItem + "' ", function (err) {
+    if (err) {
+      console.log(err);
+    }
+    else {
+      console.log("Content Added!");
+    }
+  });
   var songSearch;
 
   //only works if arguement is literally " " vs being left blank in order to get default song
@@ -49,6 +65,15 @@ function spotifySearch () {
 
 //function that will gather info of the film searched
 function omdb(){
+  fs.appendFile("random.txt", " 'Command: movie-this; Film searched: " + searchItem + "' ", function (err) {
+    if (err) {
+      console.log(err);
+    }
+    else {
+      console.log("Content Added!");
+    }
+  });
+
   var queryUrl;
 
   //only works if arguement is literally " " vs being left blank in order to get default film
@@ -74,6 +99,14 @@ function omdb(){
 
 //function for do-what-it-says. It will read the random.txt file and split the array. it will take from this "I want it that way" as a song and run the spotify function and search this song.
 function doWhatItSays (){
+  fs.appendFile("random.txt", " 'Command: do-what-it-says' ", function (err) {
+    if (err) {
+      console.log(err);
+    }
+    else {
+      console.log("Content Added!");
+    }
+  });
   fs.readFile("random.txt", "utf8", function (error, data) {
     if (error) {
       return console.log(error);
