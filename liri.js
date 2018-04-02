@@ -34,7 +34,7 @@ function twitterSearch (){
 
 //function that will gather info of the song searched
 function spotifySearch () {
-  fs.appendFile("random.txt", "; 'Command: spotify-this-song; Song searched: " + searchItem + "' ", function (err) {
+  fs.appendFile("random.txt", " 'Command: spotify-this-song; Song searched: " + searchItem + "' ", function (err) {
     if (err) {
       console.log(err);
     }
