@@ -1,0 +1,7 @@
+
+'Command: my-tweets'
+'Command: spotify-this-song; Song searched: rooster'
+'Command: do-what-it-says'
+'Command: spotify-this-song; Song searched: "I Want it That Way"'
+'Command: spotify-this-song; Song searched:  '
+'Command: movie-this; Film searched: the sandlot'
